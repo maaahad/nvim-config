@@ -1,23 +1,31 @@
--- keymap.sets are automatically loaded on the VeryLazy event
--- Default keymap.sets that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymap.sets.lua
--- Add any additional keymap.sets here
+-- keymap are automatically loaded on the VeryLazy event
+-- Default keymap that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymap.sets.lua
+-- Add any additional keymap here
 
--- local keymap.set = LazyVim.safe_keymap.set_set
+function Map(mode, lhs, rhs, opts)
+  local options = { noremap = true, silent = true }
+  if opts then
+    options = vim.tbl_extend("force", options, opts)
+  end
+  vim.keymap.set(mode, lhs, rhs, options)
+end
 
-local keymap = vim.keymap
+vim.g.mapleader = " "
+
+-- local map = vim.keymap.set
 
 -- exit insert mode with jk
-keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+Map("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 -- clear search highlight
-keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlight" })
+Map("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlight" })
 
 -- increment, decrement number
-keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
-keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
+Map("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
+Map("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 
 -- window
-keymap.set("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" })
+Map("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" })
 
 -- tab
-keymap.set("n", "<leader><tab>f", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
+Map("n", "<leader><tab>F", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })

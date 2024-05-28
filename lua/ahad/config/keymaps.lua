@@ -12,8 +12,6 @@ end
 
 vim.g.mapleader = " "
 
--- local map = vim.keymap.set
-
 -- exit insert mode with jk
 Map("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 

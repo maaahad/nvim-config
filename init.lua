@@ -1,2 +1,3 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
-require("ahad.config.lazy")
+require("ahad.config")
+require("ahad.lazy")

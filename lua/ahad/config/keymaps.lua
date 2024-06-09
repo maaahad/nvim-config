@@ -30,9 +30,9 @@ Map("n", "<leader><tab>F", "<cmd>tabnew %<CR>", { desc = "Open current buffer in
 
 -- move lines
 -- TODO: Need to remap j,k to something else so that both hand can be used
-Map("n", "_j", "<cmd>m .+1<cr>==", { desc = "Move Down" })
-Map("n", "_k", "<cmd>m .-2<cr>==", { desc = "Move Up" })
-Map("i", "_j", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
-Map("i", "_k", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
-Map("v", "_j", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
-Map("v", "_k", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
+-- Map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move Down" })
+-- Map("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move Up" })
+-- Map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
+-- Map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
+-- Map("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
+-- Map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })

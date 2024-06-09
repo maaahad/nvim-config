@@ -1,6 +1,14 @@
 return -- lazy.nvim
 {
   "folke/noice.nvim",
-  -- disable noice
+  -- disable/disable noice
   enabled = true,
+  config = function()
+    require("noice").setup({
+      cmdline = {
+        -- classic Cmdline
+        view = "cmdline",
+      },
+    })
+  end,
 }

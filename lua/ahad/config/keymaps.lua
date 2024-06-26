@@ -16,14 +16,14 @@ vim.g.mapleader = " "
 Map("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 -- clear search highlight
-Map("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlight" })
+Map("n", "<leader>nh", ":nohl<CR>", { desc = "[ n ]o search [ h ]ighlight" })
 
 -- increment, decrement number
-Map("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
-Map("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
+Map("n", "<leader>+", "<C-a>", { desc = "Increment [ + ] number" }) -- increment
+Map("n", "<leader>-", "<C-x>", { desc = "Decrement [ - ] number" }) -- decrement
 
 -- window
-Map("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" })
+Map("n", "<leader>we", "<C-w>=", { desc = "Make [ w ]indow [ e ]qual size" })
 
 -- tab
 Map("n", "<leader><tab>F", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })

@@ -14,6 +14,7 @@ vim.g.mapleader = " "
 
 -- exit insert mode with jk
 Map("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+Map("i", "§", "<ESC>", { desc = "Exit insert mode with jk" })
 
 -- clear search highlight
 Map("n", "<leader>nh", ":nohl<CR>", { desc = "[ n ]o search [ h ]ighlight" })

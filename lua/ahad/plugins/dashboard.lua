@@ -10,18 +10,6 @@ return {
     -- ===  === ===  ===   ==== ====   ===  ===
     -- ]]
 
-    --     local logo = [[
-    -- _________________________________________________________________________________________/\\\________________________________/\\\__
-    --  ________________________________________________________________________________________\/\\\_______________________________\/\\\__
-    --   ________________________________________________________________________________________\/\\\_______________________________\/\\\__
-    --    __/\\\\\\\\\_____/\\/\\\\\\\___/\\____/\\___/\\__/\\\\\\\\\_______________/\\\\\\\\\____\/\\\__________/\\\\\\\\\___________\/\\\__
-    --     _\////////\\\___\/\\\/////\\\_\/\\\__/\\\\_/\\\_\////////\\\_____________\////////\\\___\/\\\\\\\\\\__\////////\\\_____/\\\\\\\\\__
-    --      ___/\\\\\\\\\\__\/\\\___\///__\//\\\/\\\\\/\\\____/\\\\\\\\\\______________/\\\\\\\\\\__\/\\\/////\\\___/\\\\\\\\\\___/\\\////\\\__
-    --       __/\\\/////\\\__\/\\\__________\//\\\\\/\\\\\____/\\\/////\\\_____________/\\\/////\\\__\/\\\___\/\\\__/\\\/////\\\__\/\\\__\/\\\__
-    --        _\//\\\\\\\\/\\_\/\\\___________\//\\\\//\\\____\//\\\\\\\\/\\___________\//\\\\\\\\/\\_\/\\\___\/\\\_\//\\\\\\\\/\\_\//\\\\\\\/\\_
-    --         __\////////\//__\///_____________\///__\///______\////////\//_____________\////////\//__\///____\///___\////////\//___\///////\//__
-    --     ]]
-
     local logo = [[
    ________  ________  ________  ________      ________  ________  ________   _______ 
   ╱        ╲╱        ╲╱  ╱  ╱  ╲╱        ╲    ╱        ╲╱    ╱   ╲╱        ╲_╱       ╲
@@ -33,7 +21,7 @@ return {
     logo = string.rep("\n", 8) .. logo .. "\n\n"
 
     local opts = {
-      theme = "hyper",
+      theme = "doom",
       hide = {
         -- this is taken care of by lualine
         -- enabling this messes up the actual laststatus setting after loading a file
@@ -45,121 +33,121 @@ return {
           enable = true,
         },
         -- stylua: ignore
-        shortcut = {
-        {
-          action = "lua LazyVim.pick()()",
-          desc = " Find File",
-          icon = " ",
-          key = "f",
-        },
-        {
-          action = "ene | startinsert",
-          desc = " New File",
-          icon = " ",
-          key = "n",
-        },
-        {
-          action = 'lua LazyVim.pick("oldfiles")()',
-          desc = " Recent Files",
-          icon = " ",
-          key = "r",
-        },
-        {
-          action = 'lua LazyVim.pick("live_grep")()',
-          desc = " Find Text",
-          icon = " ",
-          key = "g",
-        },
-        {
-          action = "lua LazyVim.pick.config_files()()",
-          desc = " Config",
-          icon = " ",
-          key = "c",
-        },
-        {
-          action = 'lua require("persistence").load()',
-          desc = " Restore Session",
-          icon = " ",
-          key = "s",
-        },
-        {
-          action = "LazyExtras",
-          desc = " Lazy Extras",
-          icon = " ",
-          key = "x",
-        },
-        {
-          action = "Lazy",
-          desc = " Lazy",
-          icon = "󰒲 ",
-          key = "l",
-        },
-        {
-          action = function()
-            vim.api.nvim_input("<cmd>qa<cr>")
-          end,
-          desc = " Quit",
-          icon = " ",
-          key = "q",
-        },
-      },
+      --   shortcut = {
+      --   {
+      --     action = "lua LazyVim.pick()()",
+      --     desc = " Find File",
+      --     icon = " ",
+      --     key = "f",
+      --   },
+      --   {
+      --     action = "ene | startinsert",
+      --     desc = " New File",
+      --     icon = " ",
+      --     key = "n",
+      --   },
+      --   {
+      --     action = 'lua LazyVim.pick("oldfiles")()',
+      --     desc = " Recent Files",
+      --     icon = " ",
+      --     key = "r",
+      --   },
+      --   {
+      --     action = 'lua LazyVim.pick("live_grep")()',
+      --     desc = " Find Text",
+      --     icon = " ",
+      --     key = "g",
+      --   },
+      --   {
+      --     action = "lua LazyVim.pick.config_files()()",
+      --     desc = " Config",
+      --     icon = " ",
+      --     key = "c",
+      --   },
+      --   {
+      --     action = 'lua require("persistence").load()',
+      --     desc = " Restore Session",
+      --     icon = " ",
+      --     key = "s",
+      --   },
+      --   {
+      --     action = "LazyExtras",
+      --     desc = " Lazy Extras",
+      --     icon = " ",
+      --     key = "x",
+      --   },
+      --   {
+      --     action = "Lazy",
+      --     desc = " Lazy",
+      --     icon = "󰒲 ",
+      --     key = "l",
+      --   },
+      --   {
+      --     action = function()
+      --       vim.api.nvim_input("<cmd>qa<cr>")
+      --     end,
+      --     desc = " Quit",
+      --     icon = " ",
+      --     key = "q",
+      --   },
+      -- },
         center = {
-          -- {
-          --   action = "lua LazyVim.pick()()",
-          --   desc = " Find File",
-          --   icon = " ",
-          --   key = "f",
-          -- },
-          -- {
-          --   action = "ene | startinsert",
-          --   desc = " New File",
-          --   icon = " ",
-          --   key = "n",
-          -- },
-          -- {
-          --   action = 'lua LazyVim.pick("oldfiles")()',
-          --   desc = " Recent Files",
-          --   icon = " ",
-          --   key = "r",
-          -- },
-          -- {
-          --   action = 'lua LazyVim.pick("live_grep")()',
-          --   desc = " Find Text",
-          --   icon = " ",
-          --   key = "g",
-          -- },
-          -- {
-          --   action = "lua LazyVim.pick.config_files()()",
-          --   desc = " Config",
-          --   icon = " ",
-          --   key = "c",
-          -- },
-          -- {
-          --   action = 'lua require("persistence").load()',
-          --   desc = " Restore Session",
-          --   icon = " ",
-          --   key = "s",
-          -- },
-          -- {
-          --   action = "LazyExtras",
-          --   desc = " Lazy Extras",
-          --   icon = " ",
-          --   key = "x",
-          -- },
-          -- {
-          --   action = "Lazy",
-          --   desc = " Lazy",
-          --   icon = "󰒲 ",
-          --   key = "l",
-          -- },
-          -- {
-          --   action = function()
-          --     vim.api.nvim_input("<cmd>qa<cr>")
-          --   end,
-          --   desc = " Quit",
-          --   icon = " ",
-          --   key = "q",
-          -- },
+          {
+            action = "lua lazyvim.pick()()",
+            desc = " find file",
+            icon = " ",
+            key = "f",
+          },
+          {
+            action = "ene | startinsert",
+            desc = " new file",
+            icon = " ",
+            key = "n",
+          },
+          {
+            action = 'lua lazyvim.pick("oldfiles")()',
+            desc = " recent files",
+            icon = " ",
+            key = "r",
+          },
+          {
+            action = 'lua lazyvim.pick("live_grep")()',
+            desc = " find text",
+            icon = " ",
+            key = "g",
+          },
+          {
+            action = "lua lazyvim.pick.config_files()()",
+            desc = " config",
+            icon = " ",
+            key = "c",
+          },
+          {
+            action = 'lua require("persistence").load()',
+            desc = " restore session",
+            icon = " ",
+            key = "s",
+          },
+          {
+            action = "lazyextras",
+            desc = " lazy extras",
+            icon = " ",
+            key = "x",
+          },
+          {
+            action = "lazy",
+            desc = " lazy",
+            icon = "󰒲 ",
+            key = "l",
+          },
+          {
+            action = function()
+              vim.api.nvim_input("<cmd>qa<cr>")
+            end,
+            desc = " quit",
+            icon = " ",
+            key = "q",
+          },
         },
         footer = function()
           local stats = require("lazy").stats()
